@@ -1,0 +1,28 @@
+# Calculator
+
+class Calculator
+  def add(a, b)
+    a + b
+  end
+
+  def subtract(a, b)
+    a - b
+  end
+
+  def multiply(a, b)
+    a * b
+  end
+
+  def divide(a, b)
+    raise "Error: Division by zero" if b.zero?
+    a / b
+  end
+end
+
+# Пример использования
+calculator = Calculator.new
+
+puts "2 + 3 = #{calculator.add(2, 3)}"
+puts "5 - 1 = #{calculator.subtract(5, 1)}"
+puts "4 * 6 = #{calculator.multiply(4, 6)}"
+puts "10 / 2 = #{calculator.divide(10, 2)}"
